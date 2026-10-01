@@ -1,0 +1,70 @@
+﻿报告严格对齐验证（2026-09-30）
+
+结论：桌面正确版已同步到严格对齐后的源码和可执行程序。
+仅保留路径、依赖、中文目录兼容修复。
+原 16 个文件中修改 3 个：CMakeLists.txt、widget.cpp、predict.py。
+其他 13 个文件与回收站匹配版本逐字节相同。
+附加 runtime.ini 为运行路径配置，英文目录链接为 MinGW 编译入口，run 为依赖部署目录。
+原版备份及报告文档保持完整，模型未更换。
+
+已完成验证
+1. 工作副本全部源文件干净编译通过。
+2. 桌面 DigitRecognition_Correct 英文入口全部源文件干净编译通过。
+3. 桌面 DigitRecognition_正确版/run 中文路径下运行实际 Qt 测试程序通过。
+4. 从非工程工作目录启动，资源路径正确；实际原模型识别 7、17、2026 成功。
+5. Python HTML 标准输出、Qt 原解析与显示、Top-3、多数字拼接及原固定字号通过。
+6. 识别期间只禁用预测，画板和清除可用；清除不重置结果；GUI 持续响应。
+7. 原窗口标题、尺寸、默认笔宽和空画板行为通过。
+
+测试使用本机 Qt 6.11.1、MinGW 13.1、OpenCV 4.5.5、既有 PyTorch 和 NumPy 环境。
+Qt5 未单独编译。本次样本测试不构成报告准确率与延迟实验的复核。
+测试辅助程序使用离屏插件路径；辅助文件已从桌面 run 中移除，不影响正常桌面运行。
+
+模型 SHA256
+8d2be2b9c89de78cefb4b28cc494deebab25aabe813cd7544d5ee90d9dc3b8e5
+
+桌面中文目录运行记录
+PASS Original Qt controls load
+PASS Original window title and minimum size restored
+PASS Original default pen width restored
+PASS Blank canvas retains the original silent behavior
+PASS Only prediction is disabled while the original canvas and clear stay available
+PASS Previous result remains visible during inference
+PASS Clear works during inference without resetting the result label
+PASS Real background inference completes
+PASS Original OpenCV splitting orders the expected number of digits
+PASS QThread keeps the Qt event loop responsive
+PASS Original HTML single-digit Top-3 output is rendered
+PASS Original fixed result font sizes restored
+MODEL sample=7 elapsed_ms=4772 text=
+7
+
+1st: [7] 99%      
+2nd: [9] 0%      
+3rd: [3] 0%
+
+
+PASS Only prediction is disabled while the original canvas and clear stay available
+PASS Previous result remains visible during inference
+PASS Real background inference completes
+PASS Original OpenCV splitting orders the expected number of digits
+PASS QThread keeps the Qt event loop responsive
+PASS Original HTML concatenates the correct multi-digit result
+PASS Original fixed result font sizes restored
+MODEL sample=17 elapsed_ms=4636 text=
+17
+多数字连写模式
+
+PASS Only prediction is disabled while the original canvas and clear stay available
+PASS Previous result remains visible during inference
+PASS Real background inference completes
+PASS Original OpenCV splitting orders the expected number of digits
+PASS QThread keeps the Qt event loop responsive
+PASS Original HTML concatenates the correct multi-digit result
+PASS Original fixed result font sizes restored
+MODEL sample=2026 elapsed_ms=11550 text=
+2026
+多数字连写模式
+
+PASS Python stdout and Worker use the report's original HTML protocol
+ALL STRICT REPORT CHECKS PASSED

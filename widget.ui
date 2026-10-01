@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <widget class="WriteLabel" name="writelabel">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>304</width>
+     <height>304</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>304</width>
+     <height>304</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>304</width>
+     <height>304</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>350</y>
+     <width>300</width>
+     <height>62</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_1">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    /* 一次性设置：宽度 + 样式 + 颜色 */
+    border: 2px solid #666;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 12px;
+}
+QPushButton:hover {
+    background-color: #e0e0e0;
+    border-color: #333;
+}
+QPushButton:pressed {
+    background-color: #d0d0d0;
+    border-color: #111;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>预测</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>80</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushbutton_clean">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    /* 一次性设置：宽度 + 样式 + 颜色 */
+    border: 2px solid #666;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 12px;
+}
+QPushButton:hover {
+    background-color: #e0e0e0;
+    border-color: #333;
+}
+QPushButton:pressed {
+    background-color: #d0d0d0;
+    border-color: #111;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>清除</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="penwide" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>9</y>
+     <width>211</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>130</y>
+     <width>100</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    /* 一次性设置：宽度 + 样式 + 颜色 */
+    border: 2px solid #666;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 12px;
+}
+QPushButton:hover {
+    background-color: #e0e0e0;
+    border-color: #333;
+}
+QPushButton:pressed {
+    background-color: #d0d0d0;
+    border-color: #111;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>橡皮</string>
+   </property>
+  </widget>
+  <widget class="ChoseColor" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>200</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="resultLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>221</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WriteLabel</class>
+   <extends>QLabel</extends>
+   <header>writelabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>penwide</class>
+   <extends>QWidget</extends>
+   <header>penwide.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ChoseColor</class>
+   <extends>QWidget</extends>
+   <header>chosecolor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

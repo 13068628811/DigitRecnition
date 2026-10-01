@@ -1,0 +1,5 @@
+最终路径（2026-10-01）
+源码：C:\Users\35452\Desktop\DigitRecnition
+构建：C:\Users\35452\Desktop\DigitRecnition\build\Debug
+打开脚本：C:\Users\35452\Desktop\DigitRecnition\用Qt打开正确版.cmd
+Debug 编译通过，旧路径目录与缓存已清理。
